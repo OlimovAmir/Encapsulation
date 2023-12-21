@@ -19,7 +19,7 @@ namespace Encapsulation
 
         }
 
-        private void Shoot() 
+        public void Shoot() 
         {
             if (!isLoaded)
             {
