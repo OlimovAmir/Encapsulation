@@ -8,12 +8,16 @@ namespace Encapsulation
 {
     internal class Gun
     {
-        private bool isLoaded;
+        public Gun(bool isLoaded)
+        {
+            _isLoaded = isLoaded;
+        }
+        private bool _isLoaded;
 
         private void Reload()
         {
             Console.WriteLine("Заражаю...");
-            isLoaded = true;
+            _isLoaded = true;
 
             Console.WriteLine("Заражено");
 
@@ -21,13 +25,13 @@ namespace Encapsulation
 
         public void Shoot() 
         {
-            if (!isLoaded)
+            if (!_isLoaded)
             {
                 Console.WriteLine("Орудие не заряжено!");
                 Reload();
             }
             Console.WriteLine("Пыщ - Пыщь\n");
-            isLoaded= false;
+            _isLoaded= false;
         }
     }
 }
